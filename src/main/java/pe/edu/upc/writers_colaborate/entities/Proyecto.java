@@ -11,19 +11,19 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name="ediciones")
+@Table(name="proyectos")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Edicion {
+public class Proyecto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate EditionDate;
-    private LocalDate CompletionDate;
+    private String Title;
     private String Description;
+    private LocalDate PublicationDate;
 
     @JsonIgnore
     @ToString.Exclude
@@ -33,12 +33,21 @@ public class Edicion {
 
     @JsonIgnore
     @ToString.Exclude
-    @ManyToOne
-    @JoinColumn(name="capitulo_id")
-    private Capitulo capitulo;
+    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    private List<Comentario> comentarios;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Edicion", fetch = FetchType.EAGER)
-    private List<Notificacion> notificaciones;
+    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    private List<Capitulo> capitulos;
+
+    @JsonIgnore
+    @ToString.Exclude
+    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    private List<Reunion> reuniones;
+
+    @JsonIgnore
+    @ToString.Exclude
+    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    private List<ProyectoGenero> proyectos_generos;
 }

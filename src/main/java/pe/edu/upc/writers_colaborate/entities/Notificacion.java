@@ -8,37 +8,24 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
-@Table(name="ediciones")
+@Table(name="notificaciones")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Edicion {
+public class Notificacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate EditionDate;
-    private LocalDate CompletionDate;
+    private LocalDate NotificationDate;
     private String Description;
 
     @JsonIgnore
     @ToString.Exclude
     @ManyToOne
-    @JoinColumn(name="autor_id")
-    private Autor autor;
-
-    @JsonIgnore
-    @ToString.Exclude
-    @ManyToOne
-    @JoinColumn(name="capitulo_id")
-    private Capitulo capitulo;
-
-    @JsonIgnore
-    @ToString.Exclude
-    @OneToMany(mappedBy = "Edicion", fetch = FetchType.EAGER)
-    private List<Notificacion> notificaciones;
+    @JoinColumn(name="edicion_id")
+    private Edicion edicion;
 }
