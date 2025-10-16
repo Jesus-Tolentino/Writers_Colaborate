@@ -11,19 +11,22 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name="ediciones")
+@Table(name="colaboraciones")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Edicion {
+public class Colaboracion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate EditionDate;
+    private LocalDate CreationDate;
     private LocalDate CompletionDate;
+    private String Rol;
     private String Description;
+    private String State;
+
 
     @JsonIgnore
     @ToString.Exclude
@@ -37,8 +40,4 @@ public class Edicion {
     @JoinColumn(name="capitulo_id")
     private Capitulo capitulo;
 
-    @JsonIgnore
-    @ToString.Exclude
-    @OneToMany(mappedBy = "Edicion", fetch = FetchType.EAGER)
-    private List<Notificacion> notificaciones;
 }

@@ -20,11 +20,11 @@ public class Subscripcion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String Type;
+    private String Description;
     private LocalDate StartDate;
     private LocalDate EndDate;
-    private String Status;
     private Double Price;
-    private String Type;
     private Boolean AutoRenew;
 
     @JsonIgnore

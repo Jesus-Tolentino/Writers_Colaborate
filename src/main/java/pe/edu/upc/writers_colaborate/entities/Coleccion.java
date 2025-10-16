@@ -11,30 +11,25 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name="capitulos")
+@Table(name="colecciones")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Capitulo {
+public class Coleccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String Title;
-    private String Content;
-    private Integer ChapterNumber;
+    private String Creator;
+    private String Type;
+    private String Description;
     private LocalDate CreationDate;
-    private Boolean Published;
+    private Boolean Enabled;
 
     @JsonIgnore
     @ToString.Exclude
-    @ManyToOne
-    @JoinColumn(name="proyecto_id")
-    private Proyecto proyecto;
-
-    @JsonIgnore
-    @ToString.Exclude
-    @OneToMany(mappedBy = "Capitulo", fetch = FetchType.EAGER)
-    private List<Colaboracion> colaboraciones;
+    @OneToMany(mappedBy = "Coleccion", fetch = FetchType.EAGER)
+    private List<ColeccionProyecto> colecciones_proyectos;
 }

@@ -23,7 +23,10 @@ public class Proyecto {
 
     private String Title;
     private String Description;
+    private LocalDate CreationDate;
     private LocalDate PublicationDate;
+    private String State;
+    private Boolean MeetingsEnabled;
 
     @JsonIgnore
     @ToString.Exclude
@@ -34,17 +37,27 @@ public class Proyecto {
     @JsonIgnore
     @ToString.Exclude
     @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
-    private List<Comentario> comentarios;
-
-    @JsonIgnore
-    @ToString.Exclude
-    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
     private List<Capitulo> capitulos;
 
     @JsonIgnore
     @ToString.Exclude
     @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
     private List<Reunion> reuniones;
+
+    @JsonIgnore
+    @ToString.Exclude
+    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    private List<Notificacion> notificaciones;
+
+    @JsonIgnore
+    @ToString.Exclude
+    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    private List<Comentario> comentarios;
+
+    @JsonIgnore
+    @ToString.Exclude
+    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    private List<ColeccionProyecto> colecciones_proyectos;
 
     @JsonIgnore
     @ToString.Exclude

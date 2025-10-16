@@ -50,5 +50,5 @@ public class Autor {
     @JsonIgnore
     @ToString.Exclude
     @OneToMany(mappedBy = "Autor", fetch = FetchType.EAGER)
-    private List<Edicion> ediciones;
+    private List<Colaboracion> colaboraciones;
 }

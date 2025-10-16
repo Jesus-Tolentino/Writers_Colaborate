@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name="proyectos_generos")
 @Data
@@ -17,8 +19,9 @@ public class ProyectoGenero {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String type;
-    private String description;
+    private LocalDate AsignmentDate;
+    private String Main;
+    private String Sub;
 
     @JsonIgnore
     @ToString.Exclude

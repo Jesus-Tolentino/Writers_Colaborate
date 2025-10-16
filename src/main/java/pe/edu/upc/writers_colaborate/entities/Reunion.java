@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 @Table(name="reuniones")
@@ -21,8 +22,10 @@ public class Reunion {
     private Long id;
 
     private String Issue;
-    private LocalDate MeetingDate;
     private String Description;
+    private LocalDate MeetingDate;
+    private LocalTime StartHour;
+    private LocalTime EndHour;
     private String Link;
 
     @JsonIgnore

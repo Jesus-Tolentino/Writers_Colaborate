@@ -20,6 +20,7 @@ public class Genero {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String Name;
     private String Description;
 
     @JsonIgnore
