@@ -32,4 +32,17 @@ public class Subscripcion {
     @ManyToOne
     @JoinColumn(name="autor_id")
     private Autor autor;
+
+    @Override
+    public String toString() {
+        return "Subscripcion{" +
+                "id=" + id +
+                ", Type='" + Type + '\'' +
+                ", Description='" + Description + '\'' +
+                ", StartDate=" + StartDate +
+                ", EndDate=" + EndDate +
+                ", Price=" + Price +
+                ", AutoRenew=" + AutoRenew +
+                '}';
+    }
 }

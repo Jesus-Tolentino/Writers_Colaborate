@@ -35,4 +35,14 @@ public class ColeccionProyecto {
     @ManyToOne
     @JoinColumn(name="proyecto_id")
     private Proyecto proyecto;
+
+    @Override
+    public String toString() {
+        return "ColeccionProyecto{" +
+                "id=" + id +
+                ", AsignmentDate='" + AsignmentDate + '\'' +
+                ", Amount='" + Amount + '\'' +
+                ", Description=" + Description +
+                '}';
+    }
 }

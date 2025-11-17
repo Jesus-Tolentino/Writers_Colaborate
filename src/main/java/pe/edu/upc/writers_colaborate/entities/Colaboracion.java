@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Table(name="colaboraciones")
@@ -27,7 +26,6 @@ public class Colaboracion {
     private String Description;
     private String State;
 
-
     @JsonIgnore
     @ToString.Exclude
     @ManyToOne
@@ -40,4 +38,15 @@ public class Colaboracion {
     @JoinColumn(name="capitulo_id")
     private Capitulo capitulo;
 
+    @Override
+    public String toString() {
+        return "Colaboracion{" +
+                "id=" + id +
+                ", CreationDate='" + CreationDate + '\'' +
+                ", CompletionDate='" + CompletionDate + '\'' +
+                ", Rol=" + Rol +
+                ", Description=" + Description +
+                ", State=" + State +
+                '}';
+    }
 }

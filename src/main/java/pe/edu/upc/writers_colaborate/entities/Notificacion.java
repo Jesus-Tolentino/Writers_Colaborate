@@ -29,4 +29,14 @@ public class Notificacion {
     @ManyToOne
     @JoinColumn(name="proyecto_id")
     private Proyecto proyecto;
+
+    @Override
+    public String toString() {
+        return "Notificacion{" +
+                "id=" + id +
+                ", Message='" + Message + '\'' +
+                ", CreationDate='" + CreationDate + '\'' +
+                ", State=" + State +
+                '}';
+    }
 }

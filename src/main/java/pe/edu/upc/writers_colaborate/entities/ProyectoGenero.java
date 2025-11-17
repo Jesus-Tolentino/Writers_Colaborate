@@ -34,4 +34,14 @@ public class ProyectoGenero {
     @ManyToOne
     @JoinColumn(name="genero_id")
     private Genero genero;
+
+    @Override
+    public String toString() {
+        return "ProyectoGenero{" +
+                "id=" + id +
+                ", AsignmentDate='" + AsignmentDate + '\'' +
+                ", Main='" + Main + '\'' +
+                ", Sub=" + Sub +
+                '}';
+    }
 }

@@ -32,4 +32,17 @@ public class Coleccion {
     @ToString.Exclude
     @OneToMany(mappedBy = "Coleccion", fetch = FetchType.EAGER)
     private List<ColeccionProyecto> colecciones_proyectos;
+
+    @Override
+    public String toString() {
+        return "Coleccion{" +
+                "id=" + id +
+                ", Title='" + Title + '\'' +
+                ", Creator='" + Creator + '\'' +
+                ", Type=" + Type +
+                ", Description=" + Description +
+                ", CreationDate=" + CreationDate +
+                ", Enabled=" + Enabled +
+                '}';
+    }
 }
