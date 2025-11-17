@@ -37,4 +37,16 @@ public class Capitulo {
     @ToString.Exclude
     @OneToMany(mappedBy = "Capitulo", fetch = FetchType.EAGER)
     private List<Colaboracion> colaboraciones;
+
+    @Override
+    public String toString() {
+        return "Capitulo{" +
+                "id=" + id +
+                ", Title='" + Title + '\'' +
+                ", Content='" + Content + '\'' +
+                ", ChapterNumber=" + ChapterNumber +
+                ", CreationDate=" + CreationDate +
+                ", Published=" + Published +
+                '}';
+    }
 }

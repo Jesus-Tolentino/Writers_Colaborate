@@ -51,4 +51,15 @@ public class Autor {
     @ToString.Exclude
     @OneToMany(mappedBy = "Autor", fetch = FetchType.EAGER)
     private List<Colaboracion> colaboraciones;
+
+    @Override
+    public String toString() {
+        return "Autor{" +
+                "id=" + id +
+                ", Name='" + Name + '\'' +
+                ", LastName='" + LastName + '\'' +
+                ", Birthdate=" + Birthdate +
+                ", Email=" + Email +
+                '}';
+    }
 }

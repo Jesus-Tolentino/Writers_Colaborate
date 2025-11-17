@@ -33,4 +33,17 @@ public class Reunion {
     @ManyToOne
     @JoinColumn(name="proyecto_id")
     private Proyecto proyecto;
+
+    @Override
+    public String toString() {
+        return "Reunion{" +
+                "id=" + id +
+                ", Issue='" + Issue + '\'' +
+                ", Description='" + Description + '\'' +
+                ", MeetingDate=" + MeetingDate +
+                ", StartHour=" + StartHour +
+                ", EndHour=" + EndHour +
+                ", Link=" + Link +
+                '}';
+    }
 }

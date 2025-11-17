@@ -63,4 +63,17 @@ public class Proyecto {
     @ToString.Exclude
     @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
     private List<ProyectoGenero> proyectos_generos;
+
+    @Override
+    public String toString() {
+        return "Proyecto{" +
+                "id=" + id +
+                ", Title='" + Title + '\'' +
+                ", Description='" + Description + '\'' +
+                ", CreationDate=" + CreationDate +
+                ", PublicationDate=" + PublicationDate +
+                ", State=" + State +
+                ", MeetingsEnabled=" + MeetingsEnabled +
+                '}';
+    }
 }
