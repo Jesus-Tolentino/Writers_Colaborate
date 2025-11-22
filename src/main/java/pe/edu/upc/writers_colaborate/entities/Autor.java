@@ -26,11 +26,11 @@ public class Autor {
     private LocalDate Birthdate;
     private String Email;
 
-    @JsonIgnore
-    @ToString.Exclude
-    @ManyToOne
-    @JoinColumn(name="user_id")
-    private User user;
+//    @JsonIgnore
+//    @ToString.Exclude
+//    @ManyToOne
+//    @JoinColumn(name="user_id")
+//    private User user;
 
     @JsonIgnore
     @ToString.Exclude
