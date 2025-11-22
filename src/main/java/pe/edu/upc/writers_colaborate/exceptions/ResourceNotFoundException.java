@@ -1,0 +1,8 @@
+package pe.edu.upc.writers_colaborate.exceptions;
+
+public class ResourceNotFoundException extends RuntimeException {
+
+    public ResourceNotFoundException() { super(); }
+    public ResourceNotFoundException(String message) { super(message); }
+
+}
