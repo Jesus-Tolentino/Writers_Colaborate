@@ -20,9 +20,9 @@ public class ColeccionProyecto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate AsignmentDate;
-    private Integer Amount;
-    private String Description;
+    private LocalDate asignmentDate;
+    private Integer amount;
+    private String description;
 
     @JsonIgnore
     @ToString.Exclude
@@ -40,9 +40,9 @@ public class ColeccionProyecto {
     public String toString() {
         return "ColeccionProyecto{" +
                 "id=" + id +
-                ", AsignmentDate='" + AsignmentDate + '\'' +
-                ", Amount='" + Amount + '\'' +
-                ", Description=" + Description +
+                ", AsignmentDate='" + asignmentDate + '\'' +
+                ", Amount='" + amount + '\'' +
+                ", Description=" + description +
                 '}';
     }
 }

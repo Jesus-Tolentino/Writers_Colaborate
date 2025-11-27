@@ -20,12 +20,12 @@ public class Subscripcion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Type;
-    private String Description;
-    private LocalDate StartDate;
-    private LocalDate EndDate;
-    private Double Price;
-    private Boolean AutoRenew;
+    private String type;
+    private String description;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private Double price;
+    private Boolean autoRenew;
 
     @JsonIgnore
     @ToString.Exclude
@@ -37,12 +37,12 @@ public class Subscripcion {
     public String toString() {
         return "Subscripcion{" +
                 "id=" + id +
-                ", Type='" + Type + '\'' +
-                ", Description='" + Description + '\'' +
-                ", StartDate=" + StartDate +
-                ", EndDate=" + EndDate +
-                ", Price=" + Price +
-                ", AutoRenew=" + AutoRenew +
+                ", Type='" + type + '\'' +
+                ", Description='" + description + '\'' +
+                ", StartDate=" + startDate +
+                ", EndDate=" + endDate +
+                ", Price=" + price +
+                ", AutoRenew=" + autoRenew +
                 '}';
     }
 }

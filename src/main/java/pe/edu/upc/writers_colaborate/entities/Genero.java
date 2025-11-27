@@ -20,20 +20,20 @@ public class Genero {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Name;
-    private String Description;
+    private String name;
+    private String description;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Genero", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "genero", fetch = FetchType.EAGER)
     private List<ProyectoGenero> proyectos_generos;
 
     @Override
     public String toString() {
         return "Genero{" +
                 "id=" + id +
-                ", Name='" + Name + '\'' +
-                ", Description='" + Description + '\'' +
+                ", Name='" + name + '\'' +
+                ", Description='" + description + '\'' +
                 '}';
     }
 }
