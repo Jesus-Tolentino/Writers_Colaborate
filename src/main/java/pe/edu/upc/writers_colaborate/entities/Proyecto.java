@@ -21,12 +21,12 @@ public class Proyecto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Title;
-    private String Description;
-    private LocalDate CreationDate;
-    private LocalDate PublicationDate;
-    private String State;
-    private Boolean MeetingsEnabled;
+    private String title;
+    private String description;
+    private LocalDate creationDate;
+    private LocalDate publicationDate;
+    private String state;
+    private Boolean meetingsEnabled;
 
     @JsonIgnore
     @ToString.Exclude
@@ -36,44 +36,44 @@ public class Proyecto {
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "proyecto", fetch = FetchType.EAGER)
     private List<Capitulo> capitulos;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "proyecto", fetch = FetchType.EAGER)
     private List<Reunion> reuniones;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "proyecto", fetch = FetchType.EAGER)
     private List<Notificacion> notificaciones;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "proyecto", fetch = FetchType.EAGER)
     private List<Comentario> comentarios;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "proyecto", fetch = FetchType.EAGER)
     private List<ColeccionProyecto> colecciones_proyectos;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Proyecto", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "proyecto", fetch = FetchType.EAGER)
     private List<ProyectoGenero> proyectos_generos;
 
     @Override
     public String toString() {
         return "Proyecto{" +
                 "id=" + id +
-                ", Title='" + Title + '\'' +
-                ", Description='" + Description + '\'' +
-                ", CreationDate=" + CreationDate +
-                ", PublicationDate=" + PublicationDate +
-                ", State=" + State +
-                ", MeetingsEnabled=" + MeetingsEnabled +
+                ", Title='" + title + '\'' +
+                ", Description='" + description + '\'' +
+                ", CreationDate=" + creationDate +
+                ", PublicationDate=" + publicationDate +
+                ", State=" + state +
+                ", MeetingsEnabled=" + meetingsEnabled +
                 '}';
     }
 }

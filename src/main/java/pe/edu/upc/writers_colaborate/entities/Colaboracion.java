@@ -20,11 +20,11 @@ public class Colaboracion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate CreationDate;
-    private LocalDate CompletionDate;
-    private String Rol;
-    private String Description;
-    private String State;
+    private LocalDate creationDate;
+    private LocalDate completionDate;
+    private String rol;
+    private String description;
+    private String state;
 
     @JsonIgnore
     @ToString.Exclude
@@ -42,11 +42,11 @@ public class Colaboracion {
     public String toString() {
         return "Colaboracion{" +
                 "id=" + id +
-                ", CreationDate='" + CreationDate + '\'' +
-                ", CompletionDate='" + CompletionDate + '\'' +
-                ", Rol=" + Rol +
-                ", Description=" + Description +
-                ", State=" + State +
+                ", CreationDate='" + creationDate + '\'' +
+                ", CompletionDate='" + completionDate + '\'' +
+                ", Rol=" + rol +
+                ", Description=" + description +
+                ", State=" + state +
                 '}';
     }
 }

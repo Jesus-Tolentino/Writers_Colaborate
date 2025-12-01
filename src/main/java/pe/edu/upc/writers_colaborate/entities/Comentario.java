@@ -20,8 +20,8 @@ public class Comentario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Content;
-    private LocalDate PublicationDate;
+    private String content;
+    private LocalDate publicationDate;
 
     @JsonIgnore
     @ToString.Exclude
@@ -39,8 +39,8 @@ public class Comentario {
     public String toString() {
         return "Comentario{" +
                 "id=" + id +
-                ", Content='" + Content + '\'' +
-                ", PublicationDate='" + PublicationDate + '\'' +
+                ", Content='" + content + '\'' +
+                ", PublicationDate='" + publicationDate + '\'' +
                 '}';
     }
 }

@@ -21,28 +21,28 @@ public class Coleccion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Title;
-    private String Creator;
-    private String Type;
-    private String Description;
-    private LocalDate CreationDate;
-    private Boolean Enabled;
+    private String title;
+    private String creator;
+    private String type;
+    private String description;
+    private LocalDate creationDate;
+    private Boolean enabled;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Coleccion", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "coleccion", fetch = FetchType.EAGER)
     private List<ColeccionProyecto> colecciones_proyectos;
 
     @Override
     public String toString() {
         return "Coleccion{" +
                 "id=" + id +
-                ", Title='" + Title + '\'' +
-                ", Creator='" + Creator + '\'' +
-                ", Type=" + Type +
-                ", Description=" + Description +
-                ", CreationDate=" + CreationDate +
-                ", Enabled=" + Enabled +
+                ", Title='" + title + '\'' +
+                ", Creator='" + creator + '\'' +
+                ", Type=" + type +
+                ", Description=" + description +
+                ", CreationDate=" + creationDate +
+                ", Enabled=" + enabled +
                 '}';
     }
 }

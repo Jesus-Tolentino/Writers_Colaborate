@@ -20,9 +20,9 @@ public class Notificacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Message;
-    private LocalDate CreationDate;
-    private Boolean State;
+    private String message;
+    private LocalDate creationDate;
+    private Boolean state;
 
     @JsonIgnore
     @ToString.Exclude
@@ -34,9 +34,9 @@ public class Notificacion {
     public String toString() {
         return "Notificacion{" +
                 "id=" + id +
-                ", Message='" + Message + '\'' +
-                ", CreationDate='" + CreationDate + '\'' +
-                ", State=" + State +
+                ", Message='" + message + '\'' +
+                ", CreationDate='" + creationDate + '\'' +
+                ", State=" + state +
                 '}';
     }
 }

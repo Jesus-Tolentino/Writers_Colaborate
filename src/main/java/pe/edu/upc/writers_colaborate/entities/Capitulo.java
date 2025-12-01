@@ -21,11 +21,11 @@ public class Capitulo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Title;
-    private String Content;
-    private Integer ChapterNumber;
-    private LocalDate CreationDate;
-    private Boolean Published;
+    private String title;
+    private String content;
+    private Integer chapterNumber;
+    private LocalDate creationDate;
+    private Boolean published;
 
     @JsonIgnore
     @ToString.Exclude
@@ -35,18 +35,18 @@ public class Capitulo {
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Capitulo", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "capitulo", fetch = FetchType.EAGER)
     private List<Colaboracion> colaboraciones;
 
     @Override
     public String toString() {
         return "Capitulo{" +
                 "id=" + id +
-                ", Title='" + Title + '\'' +
-                ", Content='" + Content + '\'' +
-                ", ChapterNumber=" + ChapterNumber +
-                ", CreationDate=" + CreationDate +
-                ", Published=" + Published +
+                ", Title='" + title + '\'' +
+                ", Content='" + content + '\'' +
+                ", ChapterNumber=" + chapterNumber +
+                ", CreationDate=" + creationDate +
+                ", Published=" + published +
                 '}';
     }
 }

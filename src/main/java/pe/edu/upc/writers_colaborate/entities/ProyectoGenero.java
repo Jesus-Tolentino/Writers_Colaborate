@@ -19,9 +19,9 @@ public class ProyectoGenero {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate AsignmentDate;
-    private String Main;
-    private String Sub;
+    private LocalDate asignmentDate;
+    private String main;
+    private String sub;
 
     @JsonIgnore
     @ToString.Exclude
@@ -39,9 +39,9 @@ public class ProyectoGenero {
     public String toString() {
         return "ProyectoGenero{" +
                 "id=" + id +
-                ", AsignmentDate='" + AsignmentDate + '\'' +
-                ", Main='" + Main + '\'' +
-                ", Sub=" + Sub +
+                ", AsignmentDate='" + asignmentDate + '\'' +
+                ", Main='" + main + '\'' +
+                ", Sub=" + sub +
                 '}';
     }
 }

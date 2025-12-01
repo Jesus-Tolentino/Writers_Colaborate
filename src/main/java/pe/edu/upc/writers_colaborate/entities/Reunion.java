@@ -21,12 +21,12 @@ public class Reunion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Issue;
-    private String Description;
-    private LocalDate MeetingDate;
-    private LocalTime StartHour;
-    private LocalTime EndHour;
-    private String Link;
+    private String issue;
+    private String description;
+    private LocalDate meetingDate;
+    private LocalTime startHour;
+    private LocalTime endHour;
+    private String link;
 
     @JsonIgnore
     @ToString.Exclude
@@ -38,12 +38,12 @@ public class Reunion {
     public String toString() {
         return "Reunion{" +
                 "id=" + id +
-                ", Issue='" + Issue + '\'' +
-                ", Description='" + Description + '\'' +
-                ", MeetingDate=" + MeetingDate +
-                ", StartHour=" + StartHour +
-                ", EndHour=" + EndHour +
-                ", Link=" + Link +
+                ", Issue='" + issue + '\'' +
+                ", Description='" + description + '\'' +
+                ", MeetingDate=" + meetingDate +
+                ", StartHour=" + startHour +
+                ", EndHour=" + endHour +
+                ", Link=" + link +
                 '}';
     }
 }

@@ -21,10 +21,10 @@ public class Autor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Name;
-    private String LastName;
-    private LocalDate Birthdate;
-    private String Email;
+    private String name;
+    private String lastName;
+    private LocalDate birthdate;
+    private String email;
 
 //    @JsonIgnore
 //    @ToString.Exclude
@@ -34,32 +34,32 @@ public class Autor {
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Autor", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "autor", fetch = FetchType.EAGER)
     private List<Subscripcion> subscripciones;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Autor", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "autor", fetch = FetchType.EAGER)
     private List<Proyecto> proyectos;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Autor", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "autor", fetch = FetchType.EAGER)
     private List<Comentario> comentarios;
 
     @JsonIgnore
     @ToString.Exclude
-    @OneToMany(mappedBy = "Autor", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "autor", fetch = FetchType.EAGER)
     private List<Colaboracion> colaboraciones;
 
     @Override
     public String toString() {
         return "Autor{" +
                 "id=" + id +
-                ", Name='" + Name + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", Birthdate=" + Birthdate +
-                ", Email=" + Email +
+                ", Name='" + name + '\'' +
+                ", LastName='" + lastName + '\'' +
+                ", Birthdate=" + birthdate +
+                ", Email=" + email +
                 '}';
     }
 }
