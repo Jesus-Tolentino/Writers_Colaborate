@@ -6,8 +6,6 @@ import pe.edu.upc.writers_colaborate.entities.Autor;
 import java.util.List;
 
 public interface AutorRepository extends JpaRepository<Autor, Long> {
-
-    List<Autor> findByName(String name);
-
-    List<Autor> findByLastName(String lastName);
+    List<Autor> findByName(String Name);
+    List<Autor> findByLastName(String LastName);
 }

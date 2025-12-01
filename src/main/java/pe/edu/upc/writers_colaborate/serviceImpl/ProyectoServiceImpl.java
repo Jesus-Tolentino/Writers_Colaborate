@@ -63,7 +63,31 @@ public class ProyectoServiceImpl implements ProyectoService {
 
     @Override
     public Proyecto edit(Proyecto proyecto) {
-        return null;
+    Proyecto proyectoFound= findById(proyecto.getId());
+        if (proyectoFound==null){
+            return null;
+        }
+        if(proyecto.getTitle()!=null && !proyecto.getTitle().isBlank()) {
+            proyectoFound.setTitle(proyecto.getTitle());
+
+        }
+        if(proyecto.getDescription()!=null && !proyecto.getDescription().isBlank()) {
+            proyectoFound.setDescription(proyecto.getDescription());
+        }
+        if(proyecto.getCreationDate()!=null) {
+            proyectoFound.setCreationDate(proyecto.getCreationDate());
+        }
+        if(proyecto.getPublicationDate()!=null) {
+            proyectoFound.setPublicationDate(proyecto.getPublicationDate());
+        }
+        if(proyecto.getState()!=null && !proyecto.getState().isBlank()) {
+            proyectoFound.setState(proyecto.getState());
+
+        }
+
+        proyectoFound.setMeetingsEnabled(proyecto.isMeetingsEnabled());
+
+        return proyectoRepository.save(proyectoFound);
     }
 
     @Override

@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/upc")
+@RequestMapping("/upc")//  http://localhost:8080/upc
 public class UserController {
 
     @Autowired
@@ -81,7 +81,7 @@ public class UserController {
 
     // Alternativa de Registro de Usuarios devolviendo DTO
 
-    @PostMapping("users/register")
+    @PostMapping("users/register") //http://localhost:8080/upc/users/register
     public ResponseEntity<DTOUser> registerUser(@RequestBody DTOUser dtoUser) {
         User newUser = userService.addUser(dtoUser);
         dtoUser.setPassword(""); // con fines de no exponer la contraseña grabada en la BD
